@@ -23,7 +23,7 @@ describe('My First Practice', () => {
         cy.get(".inventory_list").last().find('button[id="remove-test.allthethings()-t-shirt-(red)"]').should("not.contain","Add to cart");
 });
     it("Go to Cart", () => {
-        cy.get(".inventory_list").last().find('button[id="add-to-cart-test.allthethings()-t-shirt-(red)"]').click();
+        cy.get(".inventory_list").last().find('button[id="add-to-cart-test.allthethings()-t-shirt-(red)"]').click(); 
         cy.get(".shopping_cart_link").click();
         cy.get(".cart_list").should("contain","Test.allTheThings() T-Shirt (Red)");
     });
