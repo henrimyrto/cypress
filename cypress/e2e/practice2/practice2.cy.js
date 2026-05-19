@@ -12,6 +12,7 @@ it ("Practice2", () => {
     // add to cart
     cy.get("[data-test=add-to-cart-sauce-labs-backpack]").click();
      cy.get("[data-test=add-to-cart-sauce-labs-bike-light]").click();
+     cy.screenshot();
 
      //cart item number
       //  cy.get(".shopping_cart_badge").should("have.text","2");
@@ -20,6 +21,7 @@ it ("Practice2", () => {
             const badgeText = shoppingCartIcon.text();
             expect(badgeText).to.equal("2");
         });
+        cy.screenshot("cart_with_2_items");
 
         //reset app state
         cy.get("#react-burger-menu-btn").click();
